@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yuanjiaoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="圆角" />
+
+        <Button
+            android:id="@+id/yuanxingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="圆形" />
+
+        <Button
+            android:id="@+id/biliButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="比例1：2" />
+
+        <Button
+            android:id="@+id/donghuaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="动画" />
+    </LinearLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/yuanjiao"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        fresco:roundedCornerRadius="20dp"
+        android:layout_margin="10dp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/yuanxing"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        fresco:roundAsCircle="true"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/bili"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        fresco:viewAspectRatio="2"
+        android:layout_gravity="center"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/donghua"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+    <Button
+        android:id="@+id/huoqu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取注解的值"
+        />
+    <Button
+        android:id="@+id/fanshe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="反射添加集合"
+        />
+
+</LinearLayout>
